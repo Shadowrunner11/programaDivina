@@ -5,7 +5,7 @@
     --squareL:170px;
     --ofsetY:calc(0.33*var(--squareL)*0.10);
     --numberOfElements: 4; 
-    --fontSize: 30px;
+    --fontSize: 5vw;
 }
 
 .center div{
@@ -194,7 +194,7 @@ nav div{
 }
 .image{
     width: 100%;
-    height: 400px;
+    height: calc(0.6*100vw);
     background-image: url(./5274054.jpg);
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
@@ -214,7 +214,8 @@ main{margin-top: 70px;}
 .container{text-align: center; background-color: rgb(10, 30, 78);}
 .container:hover{background-color: rgb(33, 139, 209);}
 
-table{margin: auto; font-size: 2.5em; width: 80%; padding-bottom: 5%;}
+table{margin: auto; font-size: var(--fontSize); width: 80%; padding-bottom: 5%;}
 th{border-bottom: solid;}
 td{padding-right: 1%; padding-left: 4%; padding-bottom: 1.2%; text-align: justify;}
 .actividad{padding-left: 8%;}
+
