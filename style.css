@@ -1,0 +1,220 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+*{box-sizing: border-box;color:white; font-family: Arial, Helvetica, sans-serif;}
+
+:root{
+    --squareL:170px;
+    --ofsetY:calc(0.33*var(--squareL)*0.10);
+    --numberOfElements: 4; 
+    --fontSize: 30px;
+}
+
+.center div{
+    box-shadow: 5px 5px 10px 2px darkgrey;
+    border-radius: 4px;
+    margin-bottom: var(--ofsetY);
+    width: calc(0.33*var(--squareL));
+    height: var(--ofsetY);
+    background-color: white;
+
+}
+.line1{animation: animation1r 1s ease-in-out forwards;} 
+.line2{animation: animation2r 1s ease-in-out forwards;}
+.line3{animation: animation3r 1s ease-in-out forwards;}
+
+.animate .line1{animation: animation1 1s ease-in-out forwards;}
+.animate .line2{animation: animation2 0.7s ease-in-out forwards;}
+.animate .line3{animation: animation3 1s ease-in-out forwards;}
+
+.no-animate{
+    -webkit-animation: none !important;
+    animation: none !important; }
+
+@keyframes animation1 {
+    50%{
+        transform: translateY(calc(2*var(--ofsetY)));
+
+    }
+    100%{
+        transform: translateY(calc(2*var(--ofsetY))) rotate(45deg);    
+    }
+}
+
+@keyframes animation2 {
+    100%{
+        transform: scale(0);
+    }
+    
+}
+
+@keyframes animation3 {
+    50%{
+        transform: translateY(calc(-2*var(--ofsetY)));
+
+    }
+    100%{
+        transform: translateY(calc(-2*var(--ofsetY))) rotate(-45deg);    
+    }
+}
+
+@keyframes animation1r {
+    0%{
+        transform: translateY(calc(2*var(--ofsetY))) rotate(45deg);    
+    }
+    50%{
+        transform: translateY(calc(2*var(--ofsetY)));
+
+    }
+    100%{
+        transform: translateY(0);    
+    }
+   
+}
+
+@keyframes animation3r {
+    0%{
+        transform: translateY(calc(-2*var(--ofsetY))) rotate(-45deg);    
+    }
+    50%{
+        transform: translateY(calc(-2*var(--ofsetY)));
+
+    }
+    100%{
+        transform: translateY(0);    
+    }
+   
+}
+
+@keyframes animation2r {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+
+.flex-container{
+    display: flex;
+}
+.wrapper{
+    width: 100%;
+    background: royalblue;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+#menu-icon{
+    align-items: center;
+    justify-content: center;
+    background: blueviolet;
+    width: 100vw;
+    height: 70px;
+}
+#menu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+nav{
+    position: fixed;
+    left: 0;                                                   
+}
+ul{ 
+    font-size:20px;
+    text-align: center;
+    margin: 0;
+    list-style: none;
+    background: rgb(25,25,25);
+    z-index: 120;
+}
+
+li{
+    margin-bottom: 3px;
+}
+
+li a{text-decoration: none;}
+
+nav div{
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-size: var(--fontSize);
+	line-height: calc(var(--fontSize )* 1.5);
+	height: calc(var(--fontSize )* 1.5);
+    z-index: 0;
+    
+}
+	
+.carousel .pre {
+
+		height: calc(var(--fontSize )* 1.5);
+		text-shadow: 2px 2px 2px #e67e22;
+}
+	
+.carousel .change_outer {
+		height: calc(var(--fontSize )* 1.5);
+		overflow: hidden;}
+		
+.carousel .change_outer .change_inner {
+			animation: rotate 8s ease-in-out infinite;
+		}
+		
+.carousel .change_outer .change_inner .element {
+			font-weight: 700;
+			text-shadow: 2px 2px 2px #e67e22;
+		}
+		
+
+
+
+@keyframes rotate {
+	0%, 20% {
+		transform: translateY(0);
+	}
+	25%,45% {
+		transform: translateY(calc(var(--fontSize )* -1.5));
+	}
+	50%,70% {
+		transform: translateY(calc(var(--fontSize )* -3));
+	}
+	75%,95% {
+		transform: translateY(calc(var(--fontSize )* -4.5));
+	}
+	100% {
+		transform: translateY(calc(var(--fontSize )* -6));
+	}
+}
+.image{
+    width: 100%;
+    height: 400px;
+    background-image: url(./5274054.jpg);
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+header, main {
+    flex-direction: column;
+    width: 100%;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+.pre, .change_outer{z-index: 1;}
+main{margin-top: 70px;}
+
+.element{z-index:0;}
+
+.container{text-align: center; background-color: rgb(10, 30, 78);}
+.container:hover{background-color: rgb(33, 139, 209);}
+
+table{margin: auto; font-size: 2.5em; width: 80%; padding-bottom: 5%;}
+th{border-bottom: solid;}
+td{padding-right: 1%; padding-left: 4%; padding-bottom: 1.2%; text-align: justify;}
+.actividad{padding-left: 8%;}
