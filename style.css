@@ -110,6 +110,7 @@
     background: blueviolet;
     width: 100vw;
     height: 70px;
+    cursor: pointer;
 }
 #menu{
     display: none;
@@ -219,3 +220,27 @@ th{border-bottom: solid;}
 td{padding-right: 1%; padding-left: 4%; padding-bottom: 1.2%; text-align: justify;}
 .actividad{padding-left: 8%;}
 
+@media (min-width: 900px) {
+    
+    #menu-icon{
+        display: none;
+    }
+    #menu{
+        display: flex;
+        flex-direction: row;
+        background: none;
+
+    }
+    a:hover{
+        
+        color: black;
+    }
+    nav{
+        position: fixed;
+        left: 60%;
+        
+    }
+    #menu li{
+        margin: 20px;
+    }
+}
